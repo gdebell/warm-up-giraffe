@@ -1,0 +1,39 @@
+<nav>
+  <div class="nav-wrapper  deep-orange lighten-1">
+    <a href="#!" class="brand-logo center">Giraffe</a>
+    <ul class="left hide-on-med-and-down">
+      <li><a href="/#/">Home</a></li>
+      <li><a href="/#/new">+ Add New Giraffe</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="new">
+    <form class="col s12" name="newAnimalForm" >
+
+      <div class="row">
+        <div class="input-field col s4">
+          <input id="name" type="text" name="name" ng-model="info.name">
+          <label for="name">Name</label>
+        </div>
+
+        <div class="input-field col s4">
+          <input id="biography" type="text" name="biography" ng-model="info.biography">
+          <label for="biography">Biography</label>
+        </div>
+
+        <div class="input-field col s4">
+          <input id="likes" type="number" name="likes" ng-model="info.likes">
+          <label for="likes">Likes</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s11">
+          <input id="url" type="url" name="url" ng-model="info.url">
+          <label for="url">Image Url</label>
+        </div>
+          <button ng-click="newCtrl.submitNew(info)" class="btn-floating btn-large waves-effect waves-light green" type="submit"><i class="material-icons">add</i></button>
+      </div>
+    </form>
+</div>

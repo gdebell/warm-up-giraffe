@@ -1,0 +1,33 @@
+<nav>
+  <div class="nav-wrapper  deep-orange lighten-1">
+    <a href="#!" class="brand-logo center">Giraffe</a>
+    <ul class="left hide-on-med-and-down">
+      <li><a href="/#/">Home</a></li>
+      <li><a href="/#/new">+ Add New Giraffe</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="row" ng-controller="mainController as create">
+
+  <table class="bordered">
+    <thead>
+      <tr>
+        <th data-field="name">Name</th>
+        <th data-field="biography">Biography</th>
+        <th data-field="url">URL</th>
+        <th data-field="likes">Likes</th>
+      </tr>
+    </thead>
+
+    <tbody ng-repeat="giraffe in giraffesArray">
+      <tr>
+        <td>{{giraffe.name}}</td>
+        <td>{{giraffe.biography}}</td>
+        <td><img src="{{giraffe.url}}" alt="{{giraffe.name}} the Giraffe" height="125" width="150"</td>
+        <td>{{giraffe.likes}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
