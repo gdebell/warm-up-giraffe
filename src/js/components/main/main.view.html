@@ -8,7 +8,7 @@
   </div>
 </nav>
 
-<div class="row" ng-controller="mainController as create">
+<div class="row" ng-controller="mainController">
 
   <table class="bordered">
     <thead>
@@ -17,6 +17,7 @@
         <th data-field="biography">Biography</th>
         <th data-field="url">URL</th>
         <th data-field="likes">Likes</th>
+        <th data-field="likes">Comments</th>
       </tr>
     </thead>
 
@@ -26,8 +27,12 @@
         <td>{{giraffe.biography}}</td>
         <td><img src="{{giraffe.url}}" alt="{{giraffe.name}} the Giraffe" height="125" width="150"</td>
         <td>{{giraffe.likes}}</td>
+        <td><a href="#/comments/{{giraffe.id}}"><button class="btn waves-effect waves-light" name="goToComments">View Comments<i class="material-icons right">send</i>
+        </button></a></td>
+
       </tr>
     </tbody>
+
   </table>
 
 </div>
